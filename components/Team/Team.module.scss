@@ -1,0 +1,85 @@
+@use "../../pages/index.module.scss" as home;
+
+.team {
+  @include home.section;
+  display: flex;
+  justify-content: center;
+
+  &__content {
+    width: min(1000px, 100% - 60px);
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    font-family: Rubik;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 47px;
+    text-align: center;
+
+    color: #130f49;
+  }
+
+  &__person_wrap {
+    padding-top: 145px;
+
+    // >= 1000
+    @media (min-width: 1000px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      > * {
+        margin: 20px;
+      }
+    }
+    // <1000
+    @media (max-width: 999px) {
+      max-width: 600px;
+      display: grid;
+      grid-template-columns: 1fr;
+      align-self: center;
+
+      & > * + * {
+        margin-top: 50px;
+      }
+    }
+  }
+
+  &__person {
+    flex: 1;
+    padding: 40px;
+    box-sizing: border-box;
+
+    background: #f5faff;
+    border-radius: 6px;
+    min-width: 375px;
+
+    &_name {
+      margin-top: 11px;
+      font-family: Rubik;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 33px;
+
+      color: #130f49;
+    }
+
+    &_title {
+      font-family: Rubik;
+      font-size: 16px;
+      line-height: 25px;
+
+      color: #130f49;
+    }
+
+    &_desc {
+      margin-top: 13px;
+      font-family: Rubik;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 26px;
+
+      color: #130f49;
+      overflow-wrap: break-word;
+    }
+  }
+}

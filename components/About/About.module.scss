@@ -1,0 +1,47 @@
+@use "../../pages/index.module.scss" as home;
+
+.about {
+  @include home.section;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  --background-image: url("/green_bg_1.png");
+
+  &::before,
+  &::after {
+    content: "";
+    width: 100%;
+    background-image: var(--background-image);
+    background-size: 100% auto;
+  }
+
+  &::before {
+    height: min(10vw, 176px);
+  }
+  &::after {
+    height: min(10vw, 189px);
+    background-position: 0 bottom;
+  }
+
+  &__content {
+    width: 100%;
+    background-color: #05cf9e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    width: min(860px, calc(100% - 30px));
+
+    font-family: Rubik;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 64px;
+    text-align: center;
+    color: #1d214e;
+  }
+}

@@ -1,0 +1,33 @@
+@use "../../pages/index.module.scss" as home;
+
+.partners {
+  @include home.section;
+
+  &_title {
+    font-family: Rubik;
+    font-weight: 600;
+    font-size: 40px;
+    text-align: center;
+
+    color: #130f49;
+  }
+
+  &_content {
+    margin-top: 70px;
+    padding: 0 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.partners-item {
+  margin: 20px;
+  border: 1px solid #efefef;
+  border-radius: 10px;
+  width: 270px;
+  height: 135px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,62 @@
+.footer {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  &__links_group {
+    display: flex;
+  }
+
+  &__links {
+    & + & {
+      margin-left: 80px;
+    }
+
+    &__title {
+      font-family: Rubik;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 33px;
+      color: #130f49;
+      text-align: left;
+    }
+    &__content {
+      padding-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__item {
+      font-family: Rubik;
+      font-size: 14px;
+      line-height: 25px;
+      color: #130f49;
+
+      & + & {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  &__reserved {
+    margin-top: 50px;
+    opacity: 0.5;
+    font-family: Rubik;
+    font-size: 16px;
+    line-height: 32px;
+    text-align: center;
+
+    color: #130f49;
+  }
+  &__contact {
+    margin-top: 6px;
+    font-family: Rubik;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+
+    color: #130f49;
+  }
+}
